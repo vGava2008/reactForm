@@ -37,13 +37,8 @@
   }
 }
 
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
-
-body{
-  background-color: #006ef1;
-}
-
 .contact--form-wrapper {
+  margin: 30px auto;
   position: relative;
   width: 450px;
 }
