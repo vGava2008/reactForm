@@ -36,3 +36,60 @@
     transform: rotate(360deg);
   }
 }
+body{
+  background-color: #006ef1;
+}
+
+.contact--form-wrapper {
+  width: 300px;
+}
+
+.contact--form-input {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 16px;
+  color: #fff;
+  background-color: #0056dd;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  outline: none;
+  box-sizing: border-box;
+}
+.contact--form-input:focus{
+background-color: hsla(0,0%,100%,.2);
+}
+.contact--form-input::placeholder {
+  color:  rgba(255,255,255,.15);
+  font-size: 1em;
+}
+
+.link-button.dark:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,.15);
+}
+
+.link-button.dark {
+  background-color: #142333;
+}
+.link-button {
+  display: inline-block;
+  padding: 18px 40px 14px;
+  border-radius: 32px;
+  font-family: Circe;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  -webkit-transition: box-shadow .1s ease-in-out;
+  transition: box-shadow .1s ease-in-out;
+  cursor: pointer;
+}
+button, input, select, textarea {
+  font-family: Helvetica Neue,Helvetica,serif;
+  font-size: 19px;
+  color: #292929;
+}
+
+textarea {
+  resize: none;
+}
