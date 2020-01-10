@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+import './Form.css';
 
-class App extends React.Component {
+class Form extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -11,12 +11,23 @@ class App extends React.Component {
       message : '',
     }
     this.onChangeInput = this.onChangeInput.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-submitForm = (event) => {
-  event.preventDefault();
-  //console.log(this.state.name,this.state.phone,this.state.email,this.state.message);
-  console.log(this.state);
+handleSubmit (event) {
+   event.preventDefault();
+const templateId = 'template_nG6q9g9Y';
+this.sendFeedback(templateId, this.state);
+console.log(this.state);
+}
+
+sendFeedback (templateId, variables) {
+window.emailjs.send(
+  'gmail', templateId, variables
+  ).then(res => {
+    console.log('Email successfully sent!')
+  })
+  .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
 }
 
 onChangeInput(event) {
@@ -28,7 +39,7 @@ onChangeInput(event) {
   render () {
     return (
       <div className='contact--form-wrapper'>
-        <form className='contact--form' onSubmit={this.submitForm}>
+        <form className='contact--form' onSubmit={this.handleSubmit}>
           <input type='hidden' name='form-name' value='getintouch' />
           <input type='hidden' name='bot-field' />
           <input type='text' name='name'    className='contact--form-input' placeholder='Name'  onChange={this.onChangeInput} required/>
@@ -42,4 +53,4 @@ onChangeInput(event) {
   }
 }
 
-export default App;
+export default Form;
