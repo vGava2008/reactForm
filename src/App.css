@@ -41,7 +41,8 @@ body{
 }
 
 .contact--form-wrapper {
-  width: 300px;
+  position: relative;
+  width: 450px;
 }
 
 .contact--form-input {
